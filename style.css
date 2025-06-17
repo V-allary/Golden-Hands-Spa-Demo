@@ -103,3 +103,70 @@ body {
       width: 30px;
     }
   }
+  #amenities i {
+    color: #d4af37;
+    margin-bottom: 10px;
+  }
+  #membership .card {
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+
+  .payment-section {
+    padding: 30px 0;
+    background-color: #f8f9fa; /* light background for contrast */
+  }
+  
+  .payment-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #222;
+    font-weight: 600;
+  }
+  
+  .payment-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .payment-logos img {
+    height: 45px;
+    max-width: 120px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  
+  .payment-logos img:hover {
+    transform: scale(1.05);
+  }
+  .video-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    filter: brightness(0.6);
+  }
+  
+  .video-overlay {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    padding: 4rem;
+    background: rgba(0, 0, 0, 0.3); /* Optional dark overlay */
+  }
