@@ -1,0 +1,105 @@
+/* Fonts */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9f8f6;
+    color: #222;
+    line-height: 1.7;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+  .navbar-nav .nav-link {
+    font-weight: 500;
+    color: #f0f0f0 !important;
+  }
+  .navbar-nav .btn {
+    border-radius: 20px;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+  }
+  .hero-text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .hero-text h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Buttons */
+  .btn-outline-light {
+    border: 2px solid white;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+  }
+  .btn-outline-light:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Section Titles */
+  section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #444;
+  }
+  
+  /* Utilities */
+  .text-center {
+    text-align: center;
+  }
+  section {
+    padding: 80px 0;
+  }
+  @media (max-width: 768px) {
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+    .hero-text p {
+      font-size: 1rem;
+    }
+    .navbar-brand img {
+      width: 30px;
+    }
+  }
