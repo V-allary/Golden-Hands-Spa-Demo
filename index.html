@@ -70,7 +70,7 @@
         </div>
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
           <div class="card shadow border-0">
-            <img src="spa2.jpg" class="card-img-top" alt="Facial Treatment">
+            <img src="spa2.png" class="card-img-top" alt="Facial Treatment">
             <div class="card-body">
               <h5 class="card-title">Facials & Skin Care</h5>
               <p class="card-text">Glow from within with deep cleansing facials tailored to your skin type.</p>
@@ -99,10 +99,10 @@
           <img src="gallery1.jpg" class="img-fluid rounded mb-4" alt="Gallery Image">
         </div>
         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-          <img src="gallery2.jpg" class="img-fluid rounded mb-4" alt="Gallery Image">
+          <img src="gallery2.png" class="img-fluid rounded mb-4" alt="Gallery Image">
         </div>
         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-          <img src="gallery3.jpg" class="img-fluid rounded mb-4" alt="Gallery Image">
+          <img src="gallery3.png" class="img-fluid rounded mb-4" alt="Gallery Image">
         </div>
       </div>
     </div>
@@ -118,7 +118,49 @@
       </div>
     </div>
   </section>
-  
+  <!--Booking Section -->
+  <section id="booking" class="bg-dark text-light py-5">
+    <div class="container">
+      <h2 class="text-center">Book Now</h2>
+      <form action="/submit-form" method="post" class="row g-3 mt-4">
+        <div class="col-md-6">
+          <label for="name">Full Name:</label><br/>
+          <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+          
+          <label for="phone">Your Phone Number:</label><br/>
+          <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone Number">
+
+          <label for="service">Service:</label><br/>
+          <select id="service" name="service" class="form-control"  placeholder="Select Service" required>
+            <option value=""disabled selected>Select Service</option>
+            <option value="Massage">Massage</option>
+            <option value="Facial">Facial</option>
+            <option value="Sauna">Sauna</option>
+            <otpion value="Pedicure & Manicure">Pedicure & Manicure</otpion>
+            <option value="Aromatheraphy">Aromatheraphy</option>
+            <option value="Reflexology">Reflexology</option>
+            <option value="bodyscrub">Body Scrub</option>
+          </select>
+          <label for="date">Date of Visi:</label><br/>
+          <input type="date" id="date" name="date" class="form-control" placeholder="Date of Visit" required/><br/>
+
+          <label for="time">Time of Visit:</label><br/>
+          <input type="time" id="time" name="time" class="form-control" placeholder="Time of Visit" required/><br/>
+
+          <lable for="location">Preffered Location:</lable><br>
+          <select id="location" name="location" class="form-control" placeholder="Select Location" required>
+            <option value=""disabled selected>Select Location</option>
+            <option value="swisslenanamounthotel">Swiss lenana mount hotel</option>
+            <option value="highviewplaza">Highview plaza</option>
+          </select>
+          <div class="col-12 text-center">
+          <button type="submit" class="btn btn-outline-light">Submit Booking</button>
+        </div>
+        </div>
+      </form>
+
+    </div>
+  </section>
   <!-- Contact Section -->
   <section id="contact" class="bg-dark text-light py-5">
     <div class="container">
@@ -131,10 +173,10 @@
           <input type="email" name="email" class="form-control" placeholder="Your Email" required>
         </div>
         <div class="col-12">
-          <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea>
+          <textarea name="message" class="form-control" placeholder="Feedback of Your Experince" rows="4" required></textarea>
         </div>
         <div class="col-12 text-center">
-          <button type="submit" class="btn btn-outline-light">Send message</button>
+          <button type="submit" class="btn btn-outline-light">Send Feedback</button>
         </div>
       </form>
     </div>
