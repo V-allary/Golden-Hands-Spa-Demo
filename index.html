@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Golden Hands Spa</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -37,70 +37,106 @@
 </nav>
 
 <!-- Hero Section -->
-<header class="hero-section">
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="Spa-video-3.mp4" type="video/mp4" />
+<header class="hero-section" style="margin-top:70px;">
+  <video autoplay muted loop playsinline class="bg-video w-100" style="object-fit:cover; height:320px;">
+    <source src="Spa-video-4.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
   <div class="overlay"></div>
-  <div class="hero-text text-center text-white">
+  <div class="hero-text text-center text-white" style="position:relative; margin-top:-160px;">
     <h1 data-aos="fade-down">Golden Hands Spa</h1>
     <p data-aos="fade-up" data-aos-delay="300">Relax. Rejuvenate. Renew.</p>
     <a href="#booking" class="btn btn-outline-light btn-lg mt-3" data-aos="fade-up" data-aos-delay="500">Book Your Experience</a>
   </div>
 </header>
-<!-- About Section -->
+
+<!-- About -->
 <section id="about" class="bg-light text-dark text-center py-5">
-    <div class="container">
-      <h2>Welcome to Golden Hands Spa</h2>
-      <p class="lead">Your sanctuary of serenity and beauty. Step into an oasis of peace where expert care and luxurious treatments come together for your ultimate wellbeing.</p>
-    </div>
-  </section>
-  
-  <!-- Services Section -->
-  <section id="services" class="text-center py-5">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="row">
-        <div class="col-md-4 mb-4" data-aos="fade-up">
-          <div class="card shadow border-0">
-            <img src="spa1.jpg" class="card-img-top" alt="Massage Therapy">
-            <div class="card-body">
-              <h5 class="card-title">Massage Therapy</h5>
-              <p class="card-text">Relax your muscles with our signature massage techniques that melt away tension.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card shadow border-0">
-            <img src="spa2.png" class="img-fluid" alt="Facial Treatment">
-            <div class="card-body">
-              <h5 class="card-title">Facials & Skin Care</h5>
-              <p class="card-text">Glow from within with deep cleansing facials tailored to your skin type.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="card shadow border-0">
-            <img src="spa3.jpg" class="card-img-top" alt="Nail Services">
-            <div class="card-body">
-              <h5 class="card-title">Nail Care</h5>
-              <p class="card-text">Get pampered with luxurious mani-pedis in our tranquil nail studio.</p>
+  <div class="container">
+    <h2>Welcome to Golden Hands Spa</h2>
+    <p class="lead">Your sanctuary of serenity and beauty. Step into an oasis of peace where expert care and luxurious treatments come together for your ultimate wellbeing.</p>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="text-center py-5">
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="row">
+
+      <!-- Massage -->
+      <div class="col-md-4 mb-4" data-aos="fade-up">
+        <div class="card shadow border-0 h-100">
+          <img src="massage.jpg" class="card-img-top" alt="Massage Therapy">
+          <div class="card-body">
+            <h5 class="card-title">Massage Therapy</h5>
+            <p class="card-text">Relax your muscles with our signature massage techniques that melt away tension.</p>
+            <button class="toggle-btn" data-full="true" data-target="#massage-list" ...>Explore Options</button>
+            <div id="massage-list" class="extra-list" aria-hidden="true" hidden>
+              <ul class="text-start mb-0">
+                <li>Swedish Massage - 60 / 90 min</li>
+                <li>Deep Tissue - 60 / 90 min</li>
+                <li>Aromatherapy - 60 min</li>
+                <li>Hot Stone - 90 min</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Facial -->
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card shadow border-0 h-100">
+          <img src="facial.jpg" class="card-img-top" alt="Facial Treatment">
+          <div class="card-body">
+            <h5 class="card-title">Facials & Skin Care</h5>
+            <p class="card-text">Glow from within with deep cleansing facials tailored to your skin type.</p>
+            <button class="toggle-btn" data-full="ture"  data-target="#facial-list">
+              Explore Options
+            </button>
+            <div id="facial-list" class="extra-list" aria-hidden="true" hidden>
+              <ul class="text-start mb-0">
+                <li>Hydrating Facial - 45 min</li>
+                <li>Acne Control - 60 min</li>
+                <li>Anti-ageing Revive - 75 min</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nail Care -->
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card shadow border-0 h-100">
+          <img src="Nailcare.jpg" class="card-img-top" alt="Nail Services">
+          <div class="card-body">
+            <h5 class="card-title">Nail Care</h5>
+            <p class="card-text">Get pampered with luxurious mani-pedis in our tranquil nail studio.</p>
+            <button class="toggle-btn"  data-full="true" data-target="#nail-list">
+              Explore Options
+            </button>
+            <div id="nail-list" class="extra-list" aria-hidden="true" hidden>
+              <ul class="text-start mb-0">
+                <li>Classic Manicure</li>
+                <li>Gel Manicure</li>
+                <li>Pedicure Deluxe</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
-  <!-- amenities -->
+  </div>
+</section>
+
+<!-- Amenities (kept — optional content) -->
 <section id="amenities" class="video-section position-relative">
-  <!-- Background Video -->
   <video autoplay muted loop playsinline class="bg-video">
     <source src="Spa-video-4.MP4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
-  <!-- Overlay Content -->
   <div class="video-overlay d-flex align-items-center justify-content-center text-center">
     <div class="text-white">
       <h2 class="display-4 fw-bold">Our Luxurious Spa Amenities</h2>
@@ -110,187 +146,183 @@
   </div>
 </section>
 
-   <!--Membership-->
-   <section id="membership" class="bg-dark text-light py-5">
-    <div class="container text-center">
-      <h2 class="mb-4" data-aos="zoom-in">Become a Golden Member</h2>
-      <p class="lead">Unlock exclusive spa benefits and priority booking with our premium membership plans.</p>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card text-dark">
-            <div class="card-body">
-              <h5 class="card-title">Basic Bliss</h5>
-              <p class="card-text">• 1 Massage/Month<br>• 5% off other services<br>• Priority Booking</p>
-              <p><strong>KES 5,000/month</strong></p>
-              <a href="#payment" class="btn btn-outline-primary">Join Now</a>
-            </div>
+<!-- Membership -->
+<section id="membership" class="bg-dark text-light py-5">
+  <div class="container text-center">
+    <h2 class="mb-4" data-aos="zoom-in">Become a Golden Member</h2>
+    <p class="lead">Unlock exclusive spa benefits and priority booking with our premium membership plans.</p>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card text-dark">
+          <div class="card-body">
+            <h5 class="card-title">Basic Bliss</h5>
+            <p class="card-text">• 1 Massage/Month<br>• 5% off other services<br>• Priority Booking</p>
+            <p><strong>$40/month</strong></p>
+            <a href="#payment" class="btn btn-outline-primary">Join Now</a>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card text-dark border-warning">
-            <div class="card-body">
-              <h5 class="card-title text-warning">Elite Indulgence</h5>
-              <p class="card-text">• 3 Services/Month<br>• 10% off products<br>• Birthday Gift</p>
-              <p><strong>KES 12,000/month</strong></p>
-              <a href="#payment" class="btn btn-warning">Join Now</a>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-dark border-warning">
+          <div class="card-body">
+            <h5 class="card-title text-warning">Elite Indulgence</h5>
+            <p class="card-text">• 3 Services/Month<br>• 10% off products<br>• Birthday Gift</p>
+            <p><strong>$90/month</strong></p>
+            <a href="#payment" class="btn btn-warning">Join Now</a>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card text-dark">
-            <div class="card-body">
-              <h5 class="card-title">VIP Serenity</h5>
-              <p class="card-text">• Unlimited Spa Access<br>• 20% Discounts<br>• Free Facial Add-ons</p>
-              <p><strong>KES 20,000/month</strong></p>
-              <a href="#payment" class="btn btn-outline-primary">Join Now</a>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-dark">
+          <div class="card-body">
+            <h5 class="card-title">VIP Serenity</h5>
+            <p class="card-text">• Unlimited Spa Access<br>• 20% Discounts<br>• Free Facial Add-ons</p>
+            <p><strong>$155/month</strong></p>
+            <a href="#payment" class="btn btn-outline-primary">Join Now</a>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  
-  <!-- Gallery / Blog -->
-  <section id="gallery" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center">Our Space & Clients</h2>
-      <div class="row">
-        <div class="col-md-4" data-aos="zoom-in">
-          <img src="gallery1.JPG" class="img-fluid rounded mb-4" alt="Gallery Image">
-        </div>
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-          <img src="gallery2.png" class="img-fluid rounded mb-4" alt="Gallery Image">
-        </div>
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-          <img src="gallery3.JPG" class="img-fluid rounded mb-4" alt="Gallery Image">
-        </div>
-        <div class="col-md-4"data-aos="zoom-in" data-aos-delay="300">
-          <img src="gallery4.JPG" class="img-fluid rounded mb-4" alt="Gallery Image">
-        </div>
-        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
-          <img src="gallery5.JPG" class="img-fluid rounded mb-4" alt="Gallery Image">
-        </div>
-      </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center">Our Space & Clients</h2>
+    <div class="row">
+      <div class="col-md-4" data-aos="zoom-in"><img src="gallery1.JPG" class="img-fluid rounded mb-4" alt="Gallery Image"></div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100"><img src="gallery2.png" class="img-fluid rounded mb-4" alt="Gallery Image"></div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200"><img src="gallery3.JPG" class="img-fluid rounded mb-4" alt="Gallery Image"></div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300"><img src="gallery4.JPG" class="img-fluid rounded mb-4" alt="Gallery Image"></div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400"><img src="gallery5.JPG" class="img-fluid rounded mb-4" alt="Gallery Image"></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!--Booking Section -->
-  <section id="booking" class="bg-dark text-light py-5">
-    <div class="container">
-      <h2 class="text-center">Book Now</h2>
-      <form action="/submit-form" method="post" class="row g-3 mt-4">
-        <div class="col-md-6">
-          <label for="name">Full Name:</label><br/>
-          <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-          
-          <label for="phone">Your Phone Number:</label><br/>
-          <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone Number">
+<!-- Booking -->
+<section id="booking" class="bg-dark text-light py-5">
+  <div class="container">
+    <h2 class="text-center">Book Now</h2>
+    <form action="/submit-form" method="post" class="row g-3 mt-4">
+      <div class="col-md-6">
+        <label for="nameBooking">Full Name:</label>
+        <input id="nameBooking" type="text" name="name" class="form-control" placeholder="Your Name" required>
 
-          <label for="service">Service:</label><br/>
-          <select id="service" name="service" class="form-control"  placeholder="Select Service" required>
-            <option value=""disabled selected>Select Service</option>
-            <option value="Massage">Massage</option>
-            <option value="Facial">Facial</option>
-            <option value="Sauna">Sauna</option>
-            <otpion value="Pedicure & Manicure">Pedicure & Manicure</otpion>
-            <option value="Aromatheraphy">Aromatheraphy</option>
-            <option value="Reflexology">Reflexology</option>
-            <option value="bodyscrub">Body Scrub</option>
-          </select>
-          <label for="date">Date of Visit:</label><br/>
-          <input type="date" id="date" name="date" class="form-control" placeholder="Date of Visit" required/><br/>
+        <label for="emailBooking">Email</label>
+        <input id="emailBooking" type="email" name="email" class="form-control" placeholder="Your Email" required>
 
-          <label for="time">Time of Visit:</label><br/>
-          <input type="time" id="time" name="time" class="form-control" placeholder="Time of Visit" required/><br/>
+        <label for="phoneBooking" class="mt-3">Your Phone Number:</label>
+        <input id="phoneBooking" type="tel" name="phone" class="form-control" placeholder="Phone Number">
 
-          <lable for="location">Preffered Location:</lable><br>
-          <select id="location" name="location" class="form-control" placeholder="Select Location" required>
-            <option value=""disabled selected>Select Location</option>
-            <option value="swisslenanamounthotel">Swiss lenana mount hotel</option>
-            <option value="highviewplaza">Highview plaza</option>
-          </select>
-          <div class="col-12 text-center">
+        <label for="serviceSelect" class="mt-3">Service:</label>
+        <select id="serviceSelect" name="service" class="form-control" required>
+          <option value="" disabled selected>Select Service</option>
+          <option value="Massage">Massage</option>
+          <option value="Facial">Facial</option>
+          <option value="Sauna">Sauna</option>
+          <option value="Pedicure & Manicure">Pedicure & Manicure</option>
+          <option value="Aromatherapy">Aromatherapy</option>
+          <option value="Reflexology">Reflexology</option>
+          <option value="Body Scrub">Body Scrub</option>
+        </select>
+
+        <label for="date" class="mt-3">Date of Visit:</label>
+        <input type="date" id="date" name="date" class="form-control" required>
+
+        <label for="time" class="mt-3">Time of Visit:</label>
+        <input type="time" id="time" name="time" class="form-control" required>
+
+        <div class="col-12 text-center mt-4">
           <button type="submit" class="btn btn-outline-light">Submit Booking</button>
         </div>
-        </div>
-      </form>
+      </div>
+    </form>
+  </div>
+</section>
 
+<!-- Payment -->
+<section id="payment" class="bg-dark text-light py-5">
+  <div class="container text-center">
+    <h2 data-aos="zoom-in">We Accept</h2>
+    <div class="payment-logos d-flex justify-content-center gap-4 align-items-center mt-3">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/M-Paypal_Logo.png" width="90" class="img-fluid" alt="M-Pesa" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" width="90" class="img-fluid" alt="Visa" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" width="90" class="img-fluid" alt="MasterCard" />
     </div>
-  </section>
-  <!--Payment Section-->
-  <section class="payment" class="bg-dark text-light py-5"></section>>
-    <h2 class="text-center" data-aos="zoom-in">We Accept</h2>
-    <div class="payment-logos">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/M-Pesa_Logo.svg" width="100" height="100" class="img-fluid" alt="M-Pesa" />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png"  width="100"  height="100"  class="img-fluid"  alt="Visa" />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"   width="300" height="200" class="img-fluid" alt="MasterCard" />
-    </div>
-  </section>
-  
-      <!-- Sample Payment Form -->
-      <form id="payment">
-        <div class="row g-3 justify-content-center">
-          <div class="col-md-4">
-            <label for="name" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-          </div>
-          <div class="col-md-4">
-            <label for="phone" class="form-label">Phone Number (M-Pesa)</label>
-            <input type="tel" class="form-control" id="phone" placeholder="07XXXXXXXX" required>
-          </div>
-          <div class="col-md-4">
-            <label for="amount" class="form-label">Amount (KES)</label>
-            <input type="number" class="form-control" id="amount" placeholder="Amount" required>
-          </div>
-          <div class="col-md-12 text-center mt-3">
-            <button type="submit" class="btn btn-success">Pay with M-Pesa</button>
-            <button type="button" class="btn btn-primary ms-3">Pay with Card</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </section>
-   
-  <!-- Contact Section -->
-  <section id="contact" class="bg-dark text-light py-5">
-    <div class="container">
-      <h2 class="text-center">Get In Touch</h2>
-      <form action="/contact" method="POST" class="row g-3 mt-4">
-        <div class="col-md-6">
-          <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-        </div>
-        <div class="col-md-6">
-          <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-        </div>
-        <div class="col-12">
-          <textarea name="message" class="form-control" placeholder="Feedback of Your Experince" rows="4" required></textarea>
-        </div>
-        <div class="col-12 text-center">
-          <button type="submit" class="btn btn-outline-light">Send Feedback</button>
-        </div>
-      </form>
-    </div>
-  </section>
 
-  <!--location section-->
-  <section id="location" class="py-5 text-center">
-    <div class="container">
-      <h2>Find Us</h2>
-      <p>Visit our spa in the heart of Nairobi – your peace of mind is just a visit away.</p>
-      <div class="ratio ratio-16x9">
-        <iframe src="https://www.google.com/maps/embed?pb=..." frameborder="0" allowfullscreen></iframe>
+    <!-- sample payment form -->
+    <form id="paymentForm" class="row g-3 justify-content-center mt-4">
+      <div class="col-md-3">
+        <label for="payerName" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="payerName" placeholder="Your Name" required>
+      </div>
+      <div class="col-md-3">
+        <label for="payerPhone" class="form-label">Phone Number (M-Pesa)</label>
+        <input type="tel" class="form-control" id="payerPhone" placeholder="07XXXXXXXX" required>
+      </div>
+      <div class="col-md-2">
+        <label for="payerAmount" class="form-label">Amount (KES)</label>
+        <input type="number" class="form-control" id="payerAmount" placeholder="Amount" required>
+      </div>
+      <div class="col-12 text-center mt-3">
+        <button type="submit" class="btn btn-success">Paypal</button>
+        <button type="button" class="btn btn-primary ms-3">Pay with Card</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="bg-dark text-light py-5">
+  <div class="container">
+    <h2 class="text-center">Get In Touch</h2>
+    <form action="/contact" method="POST" class="row g-3 mt-4">
+      <div class="col-md-6"><input type="text" name="name" class="form-control" placeholder="Your Name" required></div>
+      <div class="col-md-6"><input type="email" name="email" class="form-control" placeholder="Your Email" required></div>
+      <div class="col-12"><textarea name="message" class="form-control" placeholder="Feedback of Your Experience" rows="4" required></textarea></div>
+      <div class="col-12 text-center"><button type="submit" class="btn btn-outline-light">Send Feedback</button></div>
+    </form>
+  </div>
+</section>
+
+<!-- Location -->
+<section id="location" class="py-5 text-center">
+  <div class="container">
+    <h2>Find Us</h2>
+    <p>Visit our spa in the heart of Chicago – your peace of mind is just a visit away.</p>
+    <div class="ratio ratio-16x9">
+      <iframe src="https://www.google.com/maps/embed?pb=..." frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Fullscreen info panel (single reusable panel) -->
+<div id="full-info-panel" class="fullpanel" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="fullpanel-title">
+  <div class="fullpanel-backdrop" data-fp-close></div>
+
+  <div class="fullpanel-wrap" role="document">
+    <button class="fullpanel-close" aria-label="Close" data-fp-close>&times;</button>
+
+    <div class="fullpanel-card">
+      <h2 id="fullpanel-title" class="fullpanel-heading"></h2>
+      <div class="fullpanel-body"></div>
+      <div class="fullpanel-footer">
+        <a href="#booking" class="btn fullpanel-cta">Reserve Now</a>
       </div>
     </div>
-  </section>
-  <!-- Footer -->
-  <footer class="text-center text-light py-4 bg-black">
-    <p>&copy; 2025 Golden Hands Spa. All rights reserved.</p>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center text-light py-4 bg-black">
+  <p>&copy; 2025 Golden Hands Spa. All rights reserved.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+<script> AOS.init(); </script>
+<script src="main.js"></script>
 </body>
 </html>
-
