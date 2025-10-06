@@ -138,3 +138,98 @@ body {
   .fullpanel-body { text-align: center; }
   .card .card-img-top { height: 180px; }
 }
+
+/* ---------- Amenities / video overlay: center text on video ---------- */
+/* Ensure video section has a visible height */
+#amenities.video-section,
+.video-section {
+  position: relative;
+  min-height: 60vh;               /* visible height; adjust to taste */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;                     /* overlay will handle spacing */
+  box-sizing: border-box;
+}
+
+/* Video: fill the section and sit behind content */
+#amenities .bg-video,
+.video-section .bg-video {
+  position: absolute;
+  inset: 0;                       /* top:0; right:0; bottom:0; left:0; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 1;
+  filter: brightness(0.45) saturate(0.95); /* dim video so text reads */
+}
+
+/* Overlay container: center content and place above video */
+#amenities .video-overlay,
+.video-section .video-overlay {
+  position: relative;    /* sits above the absolutely-positioned video */
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;   /* vertical center */
+  justify-content: center; /* horizontal center */
+  padding: 2rem;         /* spacing on small screens */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Inner text block for better contrast and readable edges */
+#amenities .video-overlay .text-white,
+.video-section .video-overlay .text-white {
+  max-width: 900px;
+  width: calc(100% - 4rem);
+  padding: 1.4rem 2rem;
+  background: rgba(255,255,255,0.06); /* subtle light panel; increases readability */
+  backdrop-filter: blur(4px);         /* soft blur behind the panel */
+  color: #fff;
+  border-radius: 6px;
+  z-index: 3;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+/* Heading and paragraph styles on top of video */
+#amenities .video-overlay .text-white h2,
+.video-section .video-overlay .text-white h2 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.6rem, 3.2vw, 2.8rem); /* responsive */
+  line-height: 1.05;
+  color: rgba(255,255,255,0.95);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.45);
+}
+#amenities .video-overlay .text-white p,
+.video-section .video-overlay .text-white p {
+  margin: 0;
+  color: rgba(255,255,255,0.9);
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.6;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.35);
+}
+
+/* CTA button inside overlay - keep visible above everything */
+#amenities .video-overlay .btn,
+.video-section .video-overlay .btn {
+  margin-top: 1rem;
+  z-index: 4;
+}
+
+/* Avoid navbar covering the top of the section if navbar is fixed */
+nav.navbar.fixed-top ~ #amenities,
+nav.navbar.fixed-top ~ .video-section {
+  padding-top: calc(var(--navbar-offset, 70px)); /* adjust --navbar-offset if needed */
+}
+
+/* Small screen tweaks */
+@media (max-width: 768px) {
+  #amenities.video-section { min-height: 45vh; }
+  #amenities .video-overlay .text-white { padding: 1rem; width: calc(100% - 2rem); }
+  #amenities .video-overlay .text-white h2 { font-size: 1.6rem; }
+  #amenities .video-overlay .text-white p { font-size: 0.95rem; }
+}
